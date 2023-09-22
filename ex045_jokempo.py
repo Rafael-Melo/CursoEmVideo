@@ -1,6 +1,8 @@
 from random import randint
 from time import sleep
 
+itens = ('Pedra', 'Papel', 'Tesoura')
+
 #Computador escolhe um número
 c = randint(1,3)
 
@@ -8,9 +10,9 @@ print('-=-' * 25)
 
 j = int(input('''Vamos jogar Jokenpô!
 Escolha:
-(1) Pedra
-(2) Papel         
-(3) Tesoura
+[0] Pedra
+[1] Papel         
+[2] Tesoura\n
 '''))
 
 print('-=-' * 25)
@@ -22,28 +24,43 @@ sleep(1)
 print('Pô!')
 sleep(1)
 
-if c == 1:
-    if j == 1:
-        print("Pedra X Pedra! Empate!")
-    elif j == 2:
-        print("A Pedra é embrulhada pelo Papel! Você vencêu!")
-    elif j == 3:
-        print("A Pedra quebra a Tesoura! Você perdeu!")
+print('-=-' * 25)
 
-if c == 2:
-    if j == 1:
-        print("O Papel embrulha a Pedra! Você perdeu!")
+if c == 0:
+    if j == 0:
+        print(f"O computador escolheu \033[35m{itens[0]}\033[m!")
+        print(f"\033[35m{itens[0]}\033[m X \033[35m{itens[0]}\033[m! Empate!")
+    elif j == 1:
+        print(f"O computador escolheu \033[35m{itens[0]}\033[m!")
+        print(f"A \033[35m{itens[0]}\033[m é embrulhada pelo \033[36m{itens[1]}\033[m! Você vencêu!")
     elif j == 2:
-        print("Papel X Papel! Empate!")
-    elif j == 3:
-        print("O Papel é cortado pela Tesoura! Você venceu!")
+        print(f"O computador escolheu \033[35m{itens[0]}\033[m!")
+        print(f"A \033[35m{itens[0]}\033[m quebra a \033[34m{itens[2]}\033[m! Você perdeu!")
+    else:
+        print('\033[1;31mJogada inválida\033[m')
 
-if c == 3:
-    if j == 1:
-        print("A Tesoura é quebrada pela Pedra! Você venceu!")
+elif c == 1:
+    if j == 0:
+        print(f"O computador escolheu \033[36m{itens[1]}\033[m!")
+        print(f"O \033[36m{itens[1]}\033[m embrulha a \033[35m{itens[0]}\033[m! Você perdeu!")
+    elif j == 1:
+        print(f"O computador escolheu \033[36m{itens[1]}\033[m!")
+        print(f"\033[36m{itens[1]}\033[m X \033[36m{itens[1]}\033[m! Empate!")
     elif j == 2:
-        print("A Tesoura corta o Papel! Você perdeu!")
-    elif j == 3:
-        print("Tesoura X Tesoura! Empate!")
+        print(f"O computador escolheu \033[36m{itens[1]}\033[m!")
+        print(f"O \033[36m{itens[1]}\033[m é cortado pela \033[34m{itens[2]}\033[m! Você venceu!")
+    else:
+        print('\033[1;31mJogada inválida\033[m')
 
-print(c)
+elif c == 2:
+    if j == 0:
+        print(f"O computador escolheu \033[34m{itens[2]}\033[m!")
+        print(f"A \033[34m{itens[2]}\033[m é quebrada pela \033[35m{itens[0]}\033[m! Você venceu!")
+    elif j == 1:
+        print(f"O computador escolheu \033[34m{itens[2]}\033[m!")
+        print(f"A \033[34m{itens[2]}\033[m corta o \033[36m{itens[1]}\033[m! Você perdeu!")
+    elif j == 2:
+        print(f"O computador escolheu \033[34m{itens[2]}\033[m!")
+        print(f"\033[34m{itens[2]}\033[m X \033[34m{itens[2]}\033[m! Empate!")
+    else:
+        print('\033[1;31mJogada inválida\033[m')

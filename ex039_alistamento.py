@@ -1,17 +1,29 @@
-import datetime
+from datetime import date
 
-ano = int(input('Digite o ano de nascimento: '))
+sexo = str(input('Qual seu sexo? (M) Masculino / (F) Feminino: ')).strip()
 
-hj = datetime.date.today().year
+if sexo.upper() == 'F':
+    print('Você não precisa se alistar.')
 
-idade = hj - ano
+elif sexo.upper() == 'M':
+    ano = int(input('Digite o ano de nascimento: '))
 
-if idade < 18:
-    print(f'Você tem {idade} anos e falta {18 - idade} anos pra se alistar.')
+    hj = date.today().year
 
-elif idade > 18:
-    print(f'Você tem {idade} anos e está atrasado em {idade - 18} anos pra se alistar.')
+    idade = hj - ano
+
+    if idade < 18:
+        saldo = 18 - idade
+        print(f'Você tem {idade} anos e falta {saldo} anos pra se alistar.')
+        print(f'Você deverá se alistar em {hj + saldo}.')
+
+    elif idade > 18:
+        saldo = idade - 18
+        print(f'Você tem {idade} anos e está atrasado em {saldo} anos pra se alistar.')
+        print(f'Seu alistamento foi em {hj - saldo}.')
+
+    else:
+        print(f'Você tem {idade} anos e está na hora de se alistar.')
 
 else:
-    print(f'Você tem {idade} anos e está na hora de se alistar.')
-
+    print()
