@@ -1,5 +1,4 @@
 vel = int(input('Digite a velocidade do carro: '))
-
 if vel > 80:
     vel2 = vel - 80
     multa = vel2 * 7

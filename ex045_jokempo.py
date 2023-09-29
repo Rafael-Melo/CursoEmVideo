@@ -23,9 +23,7 @@ print('Keeeeen')
 sleep(1)
 print('Pô!')
 sleep(1)
-
 print('-=-' * 25)
-
 if c == 0:
     if j == 0:
         print(f"O computador escolheu \033[35m{itens[0]}\033[m!")
@@ -38,7 +36,6 @@ if c == 0:
         print(f"A \033[35m{itens[0]}\033[m quebra a \033[34m{itens[2]}\033[m! Você perdeu!")
     else:
         print('\033[1;31mJogada inválida\033[m')
-
 elif c == 1:
     if j == 0:
         print(f"O computador escolheu \033[36m{itens[1]}\033[m!")
@@ -51,7 +48,6 @@ elif c == 1:
         print(f"O \033[36m{itens[1]}\033[m é cortado pela \033[34m{itens[2]}\033[m! Você venceu!")
     else:
         print('\033[1;31mJogada inválida\033[m')
-
 elif c == 2:
     if j == 0:
         print(f"O computador escolheu \033[34m{itens[2]}\033[m!")

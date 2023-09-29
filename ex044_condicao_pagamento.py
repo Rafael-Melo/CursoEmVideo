@@ -1,15 +1,12 @@
 loja = (' Lojas Melo ')
 print(f'{loja:=^40}')
-
 preco = float(input('Digite o preço do produto: R$'))
-
 condicao = int(input('''Escolha a condição de pagamento:
 (1) À Vista Dinheiro/Cheque;
 (2) À Vista Cartão;
 (3) Em 2x no Cartão;
 (4) Em 3x ou mais no cartão;
 '''))
-
 if condicao == 1: # 10% de desconto
     res = preco * 0.9
     print('Você optou por pagamento à vista em dinheiro ou cheque:')
