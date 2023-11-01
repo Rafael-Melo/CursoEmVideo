@@ -1,22 +1,16 @@
 from random import randint
 from time import sleep
-
 itens = ('Pedra', 'Papel', 'Tesoura')
-
 #Computador escolhe um número
 c = randint(1,3)
-
 print('-=-' * 25)
-
 j = int(input('''Vamos jogar Jokenpô!
 Escolha:
 [0] Pedra
 [1] Papel         
 [2] Tesoura\n
 '''))
-
 print('-=-' * 25)
-
 print('Joooo')
 sleep(1)
 print('Keeeeen')
