@@ -15,4 +15,3 @@ cores = {
 nome = "Rafa"
 
 print(f"Muito prazer em te conhecer, {cores['azul']}{nome}{cores['limpa']}!!!")
-
