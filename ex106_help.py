@@ -25,6 +25,7 @@ def titulo(msg, cor=0):
     print(c[0], end='')
     sleep(1)
 
+
 # Programa Principal
 f = ''
 while True:
