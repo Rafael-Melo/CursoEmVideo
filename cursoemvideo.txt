@@ -1,0 +1,5 @@
+Rafa; 35
+Aline; 34
+Sammy; 13
+Nicole; 2
+Pandora; 1
